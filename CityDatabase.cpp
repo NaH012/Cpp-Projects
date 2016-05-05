@@ -35,16 +35,16 @@ int main() {
 void enterCity(){
 	string name = "";
 	string zip = "";
-	fstream addPerson;
-	addPerson.open("Advanced26.txt", ios::out | ios::app);
-	if (addPerson.is_open()){
+	fstream addCity;
+	addCity.open("Advanced26.txt", ios::out | ios::app);
+	if (addCity.is_open()){
 		cout << "Please enter the city's name (3 to exit): ";
 		cin.ignore();
 		getline(cin, name);
 		while (name != "3") {
 			cout << "Please enter the ZIP code for " << name << ": ";
 			cin >> zip;
-			addPerson << name << "#" << zip << '\n';
+			addCity << name << "#" << zip << '\n';
 			cout << "Please enter the city's name (3 to exit): ";
 			cin.ignore();
 			getline(cin, name);
@@ -52,7 +52,7 @@ void enterCity(){
 	}else {
 		cout << "Error Openning file." << '\n';
 	}
-	addPerson.close();
+	addCity.close();
 }
 void searchZIP(){
 	string city = "";
