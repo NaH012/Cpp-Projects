@@ -9,8 +9,8 @@ int main() {
 	string input = "";
 	int vowel = 0;
 	
-		cout << "Please enter a string (-1 to exit): ";
-		cin >> input;
+	cout << "Please enter a string (-1 to exit): ";
+	cin >> input;
 	while (input != "-1"){
 		vowel = 0;
 		for (int i = 0; i < input.length(); i += 1) {
